@@ -5,6 +5,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
+	url(r'^needs/$', 'needs.views.index'),
+	url(r'^needs/(?P<need_id>\d+)/$','needs.views.detail'),
     # Examples:
     # url(r'^$', 'needsreport.views.home', name='home'),
     # url(r'^needsreport/', include('needsreport.foo.urls')),
